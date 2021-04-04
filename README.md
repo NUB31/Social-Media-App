@@ -1,2 +1,0 @@
-# Social
-facebook clone
