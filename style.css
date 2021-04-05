@@ -95,6 +95,47 @@ body{
 .wrapper h1{
     margin-left: 30px;
 }
+
+#hidden-search-wrapper {
+    display: flex;
+    width: calc(50% + 20px);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#hidden-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#searchbar {
+    position: absolute;
+    top: 25px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#searchbar form {
+    width: 100%;
+}
+
+#searchbar form input{
+    padding: 12px 20px;
+    width: 50%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: #333333;
+    color: white;
+    font-size: 20px;
+}
+
 #signup-btn{
     cursor: pointer;
     font-weight: 600;
@@ -108,6 +149,7 @@ body{
 
 #navitem1 a, #navitem2 a, #navitem3 a, #navitem4 a{
     transition: .2s;
+    z-index: 1;
 }
 
 #content-wrapper {
@@ -500,4 +542,13 @@ body{
 
 .submit-hover:hover {
     background-color: red;
+}
+
+.border-n-n {
+    border-radius: 20px 20px 0 0 !important;
+}
+
+.border-u-u {
+    border-radius: 0 0 20px 20px !important;
+    padding: 20px 10px;
 }

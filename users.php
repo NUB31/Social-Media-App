@@ -3,35 +3,14 @@
 // ini_set('display_errors', 0);
 session_start();
 include_once("connection.php");
-function check_login($con)
-{
-
-	if(isset($_SESSION['user_id']))
-	{
-
-		$id = $_SESSION['user_id'];
-		$query = "SELECT * FROM users WHERE user_id = '$id' limit 1";
-
-		$result = mysqli_query($con,$query);
-		if($result && mysqli_num_rows($result) > 0)
-		{
-			
-			$user_data = mysqli_fetch_assoc($result);
-			return $user_data;
-		}
-	}
-
-	//redirect to login
-	header("Location: login.php");
-	die;
-
-}
+include_once("functions.php");
 
 $user_data = check_login($con);
 $user_name = $user_data['user_name'];   
 $user_id = $user_data['id'];
 
-$friends = "SELECT b.user_name, b.PP, b.active_now, b.id FROM social.users_friends a, users b WHERE a.friendID_fk = b.id AND '$user_id' = a.myID_fk;"; 
+
+$friends = "SELECT b.user_name, b.PP, b.active_now, b.id FROM sql11403330.users_friends a, users b WHERE a.friendID_fk = b.id AND '$user_id' = a.myID_fk;"; 
 $sql = mysqli_query($con, $friends);
 $output = "";
 

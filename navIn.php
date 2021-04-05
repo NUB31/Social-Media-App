@@ -4,6 +4,16 @@ include("header.php");
 <body>
 <!__ nav
     <nav class="nav">
+    <div id="searchbar">
+                <form mathod="POST">
+                    <input id="searchbarinput" type="text" placeholder="Search for users, friends or posts">
+                </form>
+                <div id="hidden-search-wrapper">
+                    <div id="hidden-search">
+
+                    </div>
+                </div>
+            </div>
         <div class="wrapper">
             <h1>
             <?php    

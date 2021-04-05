@@ -1,7 +1,7 @@
 <?php
+// error_reporting(0);
+// ini_set('display_errors', 0);
 
-error_reporting(0);
-ini_set('display_errors', 0);
 session_start();
 $title = "Profile";
 include("header.php");
@@ -20,14 +20,12 @@ if (!$newuser_id) {
     header("location: index.php?user_id=". $user_id);
 }
 
-$sql = mysqli_query($con, "SELECT * FROM users WHERE id = {$newuser_id}");
+$sql = mysqli_query($con, "SELECT * FROM users WHERE id = '$newuser_id'");
 if(mysqli_num_rows($sql) > 0){
   $row = mysqli_fetch_assoc($sql);
   $profile_pic = "./upload/".$row["PP"];
   $username = $row["PP"];
-}else{
-  header("location: index.php");
-}
+  }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -75,7 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 echo $profile_pic; 
                 ?>">
             </div>
-            
 <?php 
 if ($user_id == $newuser_id) {
     echo "
@@ -95,7 +92,6 @@ if ($user_id == $newuser_id) {
     ";
 }
 ?>
-
             <div class="welcomeMessage" id="username">
                 <?php 
                 echo $row["user_name"];
@@ -124,13 +120,12 @@ if ($user_id == $newuser_id) {
             </p>
         </div>
         <div class="main-class" id="friends">
-            <h3>friends</h3>
+            <h3>Your friends</h3>
             <div>
             <div class="friend">
                 <div style="<?php 
                 $boxcolor = $user_data['BoxColor']; 
                 echo "background-color:". $boxcolor?>">
-                    <?xml version="1.0" encoding="utf-8"?>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; display: block; shape-rendering: auto;" width="118px" height="118px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
                     <g transform="rotate(0 50 50)">
                     <rect x="49" y="22.5" rx="0" ry="0" width="2" height="11" fill="#0a0a0a">
