@@ -1,0 +1,554 @@
+*{
+    font-family: Poppins;
+}
+
+body{
+    background-color: white;
+    margin: 15px;
+}
+
+#box{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#box form{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+
+
+#box input{
+    margin-top: 1em;
+    padding: 1em 1.2em;
+    text-align:center;
+    font-size: 1em;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+
+}
+
+#box button{
+    display: flex;
+    padding: 1em;
+    margin: .2em;
+    text-align: center;
+}
+
+#box a{
+    text-decoration: none !important;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: .7em;
+    transition: .2s;
+    font-size: 1.1em;
+}
+
+#box a:hover{
+    color: red;
+}
+
+#box h1{
+    margin-top: 2em;
+}
+
+.wrapper ul{
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 100%;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.2em;
+    margin-top: 0.3em;
+    margin-right: .9em;
+}
+.wrapper ul li{
+    display: flex;
+    list-style: none;
+    margin: 1em;
+}
+.wrapper ul li a{
+    display: flex;
+    text-decoration: none !important;
+    color: black;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+     -ms-animation: fadein 1s; /* Internet Explorer */
+      -o-animation: fadein 1s; /* Opera < 12.1 */
+         animation: fadein 1s;
+}
+
+.wrapper h1{
+    margin-left: 30px;
+}
+
+#hidden-search-wrapper {
+    display: flex;
+    width: calc(50% + 20px);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#hidden-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#searchbar {
+    position: absolute;
+    top: 25px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#searchbar form {
+    width: 100%;
+}
+
+#searchbar form input{
+    padding: 12px 20px;
+    width: 50%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: #333333;
+    color: white;
+    font-size: 20px;
+}
+
+#signup-btn{
+    cursor: pointer;
+    font-weight: 600;
+    transition: .2s;
+}
+
+#signup-btn:hover{
+    color: white;
+    background-color: #333;
+}
+
+#navitem1 a, #navitem2 a, #navitem3 a, #navitem4 a{
+    transition: .2s;
+    z-index: 1;
+}
+
+#content-wrapper {
+    width: 100%;
+}
+
+#profile-info-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.welcomeMessage {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+#pp-button {
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    transition: .2s;
+}
+
+#profileInfo {
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#profileInfo div {
+    display: flex;
+    align-items: center;
+    margin: 25px 25px 25px 25px;
+}
+
+#profileInfo img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+#profileInfo form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 20px;
+    display: none;
+    height: 60px;
+}
+
+.inputwrappers {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+}
+
+.inputwrappers h4{
+    margin: 0;
+    margin-bottom: 5px;
+}
+#fileinputwrapper {
+    border-left: 1px solid black;
+    padding-left: 35px;
+}
+
+#usernameinputwrapper {
+    padding-right: 40px;
+}
+
+#profileInfo input {
+    text-align:center;
+    font-size: 16px;
+    padding: 0 20px;
+    width: 150px;
+    align-items: center;
+}
+
+#fileToUpload {
+   width: 325px !important;
+   height: 27px  !important;
+}
+
+@media screen and (max-width: 850px){
+    #profileInfo form {
+        flex-direction: column !important;
+    } 
+    #profileInfo {
+        flex-direction:column;
+        flex-wrap: nowrap;
+    }
+    #fileToUpload {
+        width: 100% !important;
+        height: 100%  !important;
+     }
+}
+
+#pp-button {
+    height: 35px;
+}
+
+#profileInfo a {
+    outline: none;
+    border: none;
+    background: transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    text-align: center;
+    font-size: 16px;
+    padding: 6px 10px;
+}
+
+#profile-main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.main-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #DCDCDC;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 10px 10px 31px -16px rgba(0,0,0,0.53);
+}
+
+#alerts {
+    width: 20%;
+}
+#alerts h3 {
+    margin: 14px 0; 
+}
+
+#feed {
+    width: 55%;
+}
+#feed h3 {
+    margin: 14px 0; 
+}
+
+#friends {
+    width: 20%;
+}
+#friends h3 {
+    margin: 14px 0; 
+}
+
+#alerts p, #feed p, #friends p {
+    margin: 15px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .wrapper h1{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .wrapper ul {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .wrapper{
+          margin: 0;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          text-align: center;
+          padding: 0;
+      }
+      .welcomeMessage{
+        text-align: center;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+      }
+      .usermessages{
+        top: 100px;
+    }
+}
+
+@media (max-width: 440px) {
+    #form input{
+        border: none;
+        background: none;
+        outline: none;
+    }
+    
+    #form label svg{
+        width: 53px;
+        transition: .1s;
+    }
+    
+    #input1{
+        padding: 1em;
+        font-size: 1.4em;
+        width: 90%;
+    }   
+      
+}
+
+.friend {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.friend {
+    width: 95%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.friend div {
+    display: flex;
+}
+
+.friend-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin-left: 10px;
+}
+
+.friend-col div h3, .friend-col div p {
+    margin: 0 !important;
+}
+
+.friend-col div h3 i {
+    font-size: 10px;
+    margin-left: 7px;
+}
+
+.friend-col div h3 {
+    display: flex;
+    align-items: center;
+}
+
+.friend-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    overflow: hidden;
+    margin: 10px 0 10px 10px;
+}
+
+.friend-image img {
+    object-fit: cover;
+    width: 100%;
+}
+
+#usersearch {
+    width: 80%;
+}
+
+#setting-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px;
+    background: #dcdcdc;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+#setting-wrapper div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#hover-input, #box-input,  #text-input, #bg-input{
+    background-color: transparent !important;
+    width: 100px;
+    height: 30px;
+}
+
+.settings {
+    background: white;
+    outline: none;
+    border: 3px black;
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+.textfield {
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.settingHeader {
+    width: 300px;
+}
+
+.settingInput {
+    width: 260px;
+}
+
+@media screen and (max-width: 408px){
+    .wrapper ul {
+        display: none;
+    }
+}
+
+#submit-button {
+    display: flex;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    transition: .2s;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.show {
+    display: block !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: flex;
+}
+
+.in{
+    color: green !important;
+}
+
+.online{
+    color: #999999 !important;
+}
+
+.submit-hover:hover {
+    background-color: red;
+}
+
+.border-n-n {
+    border-radius: 20px 20px 0 0 !important;
+}
+
+.border-u-u {
+    border-radius: 0 0 20px 20px !important;
+    padding: 20px 10px;
+}
