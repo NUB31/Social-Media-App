@@ -5,6 +5,7 @@
 body{
     background-color: white;
     margin: 15px;
+    overflow-x: hidden;
 }
 
 #box{
@@ -551,4 +552,39 @@ body{
 .border-u-u {
     border-radius: 0 0 20px 20px !important;
     padding: 20px 10px;
+}
+
+#message-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+
+}
+
+#message-button a i {
+    transition: .2s;
+}
+
+#message-button a i:hover {
+    color: red;
+    cursor: pointer;
+}
+
+#msgbox-wrapper {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+#msgbox{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 700px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 20px;
 }

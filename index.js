@@ -49,3 +49,4 @@ searchBar.onkeyup = ()=>{
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send("searchTerm=" + searchTerm);
 }
+

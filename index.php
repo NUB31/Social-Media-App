@@ -202,9 +202,20 @@ if ($user_id == $newuser_id) {
             </div>
         </div>
     </div>
+    <div id="message-button">
+            <a onclick="message()">
+                <i class="fas fa-comments"></i>
+            </a>
+    </div>
+    <div id="msgbox-wrapper">
+        <div id="msgbox">
+
+        </div>
+    </div>
 </div>
 <script src="./index.js"></script>
 <script src="./users.js"></script>
+<script src="./message.js"></script>
 <?php
 require_once ("footer.php");
 ?>

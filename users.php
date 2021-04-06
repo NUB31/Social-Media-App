@@ -32,7 +32,7 @@ if (mysqli_num_rows($sql) == 0) {
                                 <p>'. $row['active_now'] .'</p>
                             </div>
                         </div>
-                </a>';         
+                </a>';
     }
 }echo $output;
 ?>
