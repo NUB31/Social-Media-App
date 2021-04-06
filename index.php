@@ -1,6 +1,6 @@
 <?php
-// error_reporting(0);
-// ini_set('display_errors', 0);
+error_reporting(0);
+ini_set('display_errors', 0);
 
 session_start();
 $title = "Profile";
@@ -25,7 +25,7 @@ if(mysqli_num_rows($sql) > 0){
   $row = mysqli_fetch_assoc($sql);
   $profile_pic = "./upload/".$row["PP"];
   $username = $row["PP"];
-  }
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -204,7 +204,7 @@ if ($user_id == $newuser_id) {
     </div>
     <div id="message-button">
             <a onclick="message()">
-                <i class="fas fa-comments"></i>
+                <i id="messageico" class="fas fa-comments"></i>
             </a>
     </div>
     <div id="msgbox-wrapper">
